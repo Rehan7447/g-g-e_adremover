@@ -1,0 +1,24 @@
+{
+  "name": "GGE-sucks",
+  "version": "1.0.0",
+  "description": "GGE-sucks",
+  "manifest_version": 3,
+  "author": "Reaper",
+  "action": {
+    "default_popup": "./index.html",
+    "default_title": "GGE-sucks"
+  },
+  "permissions": [
+    "https://empire.goodgamestudios.com",
+    "scripting",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://empire.goodgamestudios.com/*"],
+      "js": ["./content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
